@@ -232,6 +232,8 @@ public final class StandardReadMappings
             case Types.TIMESTAMP:
                 return Optional.of(timestampReadMapping());
         }
-        return Optional.empty();
+        return Optional.of(varcharReadMapping(createUnboundedVarcharType()));
+
+//        return Optional.empty();
     }
 }
